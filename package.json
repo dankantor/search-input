@@ -1,0 +1,18 @@
+{
+  "author": "Dan Kantor <dan@ex.fm>",
+  "name": "search-input",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dankantor/search-input",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dankantor/search-input.git"
+  },
+  "dependencies": {
+      "simple-emitter": "0.0.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
