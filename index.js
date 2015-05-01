@@ -6,6 +6,7 @@ function SearchInput(opts){
     this.counter = 0;
     this.pointerEvent = opts.pointerEvent || 'keyup';
     this.resultsShowClass = opts.resultsShowClass || 'show';
+    this.resultsFocusClass = opts.resultsFocusClass || 'focused';
     this.bgFocusClass = opts.bgFocusClass || 'focused';
     this.bgLoadingClass = opts.bgLoadingClass || 'loading';
     this.pointerEventTimeout = null;
@@ -39,7 +40,7 @@ SearchInput.prototype.onFocus = function(){
     this.bgEl.addClass(this.bgFocusClass);
     var val = $.trim(this.inputEl.val());
     if(val.length > 0){
-        this.resultsEl.addClass(this.resultsShowClass); 
+        this.resultsEl.addClass(this.resultsFocusClass); 
     }
 }
 
@@ -47,7 +48,7 @@ SearchInput.prototype.onBlur = function(){
     setTimeout(
         function(){
             this.bgEl.removeClass(this.bgFocusClass);
-            this.resultsEl.removeClass(this.resultsShowClass);
+            this.resultsEl.removeClass(this.resultsFocusClass);
         }.bind(this),
         200
     );
