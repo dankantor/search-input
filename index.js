@@ -70,6 +70,7 @@ SearchInput.prototype.onPointerEvent = function(e){
         this.searchText = null;
         this.bgEl.removeClass(this.bgLoadingClass);
         this.resultsEl.removeClass(this.resultsShowClass);
+        this.emit('empty');
     }
 }
 
@@ -95,6 +96,7 @@ SearchInput.prototype.getData = function(val){
 
 SearchInput.prototype.gotData = function(){
     this.bgEl.removeClass(this.bgLoadingClass);
+    this.emit('gotData');
 }
 
 module.exports = SearchInput;
